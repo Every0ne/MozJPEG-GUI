@@ -156,6 +156,6 @@ Func DropHandle( $hWnd, $msgID, $wParam, $lParam )
 
 	For $file in $files
 		$p = PathInfo( $file )
-		Run( @ComSpec & " /c " & $run & '"' & $file & '"' & ' > ' & '"' & $p[1] & $p[2] & 'moz-' & $quality & '-' & $p[3] & '.jpg"' )
+		Run( @ComSpec & " /c " & $run & '"' & $file & '"' & ' > ' & '"' & $p[1] & $p[2] & 'moz-' & $quality & '-' & $p[3] & '.jpg"', '', @SW_HIDE )
 	Next
 EndFunc
