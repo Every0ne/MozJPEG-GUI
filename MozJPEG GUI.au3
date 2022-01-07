@@ -1,7 +1,7 @@
 #pragma compile( LegalCopyright, 'MIT Licence' )
 #pragma compile( ProductName, 'MozJPEG GUI' )
-#pragma compile( ProductVersion, '1.0.0' )
-#pragma compile( FileVersion, '1.0.0' )
+#pragma compile( ProductVersion, '1.0.1' )
+#pragma compile( FileVersion, '1.0.1' )
 #pragma compile( Icon, '.\MozJPEG GUI.ico' )
 
 #pragma compile( ExecLevel, asInvoker )
@@ -41,13 +41,13 @@ GUICtrlSetOnEvent( $QualitySlider, 'QualitySliderChange')
 GUICtrlSetLimit( $QualitySlider, 100, 0 )
 GUICtrlSetData( $QualitySlider, $quality )
 
-global $QualityInput = GUICtrlCreateInput( 'QualityInput', 208, 40, 40, 24, BitOR( $GUI_SS_DEFAULT_INPUT,$ES_CENTER,$ES_NUMBER ) )
+global $QualityInput = GUICtrlCreateInput( 'QualityInput', 208, 40, 40, 24, BitOR( $GUI_SS_DEFAULT_INPUT, $ES_CENTER, $ES_NUMBER ) )
 GUICtrlSetFont( $QualityInput, 10, 400, 0, 'MS Sans Serif' )
 GUICtrlSetLimit( $QualityInput, 3 )
 GUICtrlSetData( $QualityInput, $quality )
 GUICtrlSetOnEvent( $QualityInput, 'QualityInputChange' )
 
-global $DropZone = GUICtrlCreateInput( '', 6, 80, 244, 98, BitOR( $SS_CENTER, $ES_MULTILINE, $WS_DISABLED ), 0 )
+global $DropZone = GUICtrlCreateInput( '', 6, 80, 244, 98, BitOR( $SS_CENTER, $ES_MULTILINE, $ES_AUTOVSCROLL, $WS_DISABLED ), 0 )
 GUICtrlSetState( $DropZone, $GUI_DROPACCEPTED )
 
 Global $DropZoneLabel = GUICtrlCreateLabel( $DropZoneLabelTxt, 88, 120, 91, 20, BitOR( $SS_CENTER, $SS_CENTERIMAGE ) )
